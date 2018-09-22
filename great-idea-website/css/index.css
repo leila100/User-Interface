@@ -85,6 +85,7 @@ header nav {
 	width: 100%;
 	height: 50px;
 	background-color: #03a5ea;
+	animation: slideInDown 1s linear;
 }
 
 header nav a {
@@ -119,6 +120,7 @@ header .header .headerTitle {
 	display: inline-block;
 	vertical-align: top;
 	margin: 60px 150px 60px 40px;
+	animation: slideInLeft 1s linear;
 }
 
 header .header .headerTitle a {
@@ -133,6 +135,7 @@ header .header .headerTitle a {
 	height: 400px;
 	background-repeat: no-repeat;
 	display: inline-block;
+	animation: bounce 1s linear;
 }
 
 .middle-img {
@@ -180,4 +183,66 @@ section p {
 .copyright {
 	text-align: center;
 	margin: 30px;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+	from {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideInDown {
+	from {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes bounce {
+
+	from,
+	20%,
+	53%,
+	80%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	40%,
+	43% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		-webkit-transform: translate3d(0, -30px, 0);
+		transform: translate3d(0, -30px, 0);
+	}
+
+	70% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		-webkit-transform: translate3d(0, -15px, 0);
+		transform: translate3d(0, -15px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, -4px, 0);
+		transform: translate3d(0, -4px, 0);
+	}
 }

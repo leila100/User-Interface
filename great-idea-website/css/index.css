@@ -103,7 +103,6 @@ header .logo {
 
 h1 {
 	font-size: 90px;
-	display: inline-block;
 }
 
 h1, h2 {
@@ -126,6 +125,23 @@ header .header .headerTitle a {
 	padding: 3px 40px;
 	border: 1px solid black;
 	color: black;
+}
+
+.headerImg {
+	background-image: url('../img/header-img.png');
+	width: 400px;
+	height: 400px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.middle-img {
+	background-image: url('../img/mid-page-accent.jpg');
+	width: 1250px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid black;
 }
 
 section {
